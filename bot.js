@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = "!";
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -13,6 +14,16 @@ client.on('message', (message) => {
 client.on('message', (message) => {
     if (message.content == 'нет') {
     	message.reply('да');
+        
+        if (!message.content startsWith(prefix)) return;
+        
+        var args = message.content.substing(prefix.length).split(" ");
+        
+        swith (args[0]); {
+            case 'ping';
+            message.channel.sendMessage('nope');
+            break;
+        }
   	}
 });
 client.on('message', (message) => {
