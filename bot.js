@@ -16,7 +16,7 @@ client.on('message', (message) => {
   	}
 });
 client.on('message', (message) => {
-    if (message.content == 'пошел нахуй!') {
+    if (message.content == 'пошёл нахуй!') {
     	message.reply('сам иди, козёл!');
   	}
 });
