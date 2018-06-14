@@ -11,13 +11,13 @@ client.on('message', (message) => {
   	}
 });
 client.on('message', (message) => {
-    if (message.content == 'да') {
-    	message.reply('нет');
+    if (message.content == 'нет') {
+    	message.reply('да');
   	}
 });
 client.on('message', (message) => {
     if (message.content == 'пошёл нахуй') {
-    	message.reply('сам иди, козёл!');
+    	message.reply('сам иди, козёл');
   	}
 });
 
