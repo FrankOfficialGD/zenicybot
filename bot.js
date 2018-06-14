@@ -17,7 +17,7 @@ client.on('message', function(message) => {
         
         var args = message.content.substing(prefix.length).split(" ");
         
-        swith (args[0]); {
+        switch (args[0]); {
             case 'ping';
             message.channel.sendMessage('nope');
             break;
