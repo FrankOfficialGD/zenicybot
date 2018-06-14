@@ -2,19 +2,17 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "!";
 
-client.on('ready', () => {
+client.on('ready', function() => {
     console.log('I am ready!');
 });
 
-client.on('message', (message) => {
-    if (message.content == 'да') {
-    	message.reply('нет');
+client.on('message', function(message) => {
+    if (message.authot.equals(bot.user)) return;
+
+    if (message.content == "нет") {
+        message.channel.sendMessage("да")
   	}
 });
-client.on('message', (message) => {
-    if (message.content == 'нет') {
-    	message.reply('да');
-        
         if (!message.content startsWith(prefix)) return;
         
         var args = message.content.substing(prefix.length).split(" ");
@@ -24,11 +22,6 @@ client.on('message', (message) => {
             message.channel.sendMessage('nope');
             break;
         }
-  	}
-});
-client.on('message', (message) => {
-    if (message.content == 'пошёл нахуй') {
-    	message.reply('сам иди, козёл!');
   	}
 });
 
