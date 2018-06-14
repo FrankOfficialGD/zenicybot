@@ -1,29 +1,11 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
-const prefix = "!";
+const bot = new Discord.Client();
 
-client.on('ready', function() => {
-    console.log('I am ready!');
+bot.on('message',(message)) -> {
+
+if (message.content == 'да'){
+message.channel.sendMessage('нет');
+}
 });
 
-client.on('message', function(message) => {
-    if (message.authot.equals(bot.user)) return;
-
-    if (message.content == "нет") {
-        message.channel.sendMessage("да")
-  	}
-});
-        if (!message.content startsWith(prefix)) return;
-        
-        var args = message.content.substing(prefix.length).split(" ");
-        
-        switch (args[0]); {
-            case 'ping';
-            message.channel.sendMessage('nope');
-            break;
-        }
-  	}
-});
-
-// THIS  MUST  BE  THIS  WAY
 client.login("NDUwMzM0NjE1NjM1MzYxODIz.DgQIRA.WfvWPeay08bFtHHf5A_6dyaT0qo");
