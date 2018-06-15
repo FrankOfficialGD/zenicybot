@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-bot.on('message',(message)) -> {
+bot.on('message', ()) => {
 
 if (message.content == 'да'){
 message.channel.sendMessage('нет');
